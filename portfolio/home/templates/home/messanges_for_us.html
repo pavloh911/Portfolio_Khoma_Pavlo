@@ -1,0 +1,52 @@
+{% extends 'home/base.html'%}
+{% load static %}
+
+{% block body %}
+<section id="blog" class="blog-mf sect-pt4 route">
+    <div class="text-center">
+        <div class="row">
+<!--          <div class="col-md-4">-->
+              <div class="card card-blog">
+                <div class="card-img"><br>
+           <h1> Sort by: {{status}}</h1>
+                <form action="" method="post">
+                    {% csrf_token %}
+                    <button type="submit" name='sort' value="new">New</button>
+                    <button type="submit" name='sort' value="worked">Worked</button>
+                    <button type="submit" name='sort' value="all">All</button>
+                    <button type="submit"><a href="{% url 'home_url'%}">Home</a></button>
+                </form>
+                    <br><br>
+            {% if messages %}
+            <form action="{%url 'change_status'%}" method="post">
+                {% csrf_token %}
+            <table class="center">
+                {% for mes in messages %}
+                <tr>
+                    <th>{{mes.user_name}}</th>
+                    <th>{{mes.user_email}}</th>
+                    <th>{{mes.user_message}}</th>
+                    <th>{{mes.data}}</th>
+                    <th>{{mes.status}}</th>
+                    <th><button type="submit" name="id" value="{{ mes.id }}">
+                        {% if mes.status == 'new' %}
+                        &#10004;
+                        {% else %}
+                        	&#10006;
+                        {% endif %}
+                    </button></th>
+                {% endfor %}
+            </table>
+            </form>
+            {% else %}
+            <h1>No messages</h1>
+                    </div>
+              </div>
+        </div>
+    </div>
+
+    </section>
+
+{% endif %}
+<br><br>
+{% endblock %}

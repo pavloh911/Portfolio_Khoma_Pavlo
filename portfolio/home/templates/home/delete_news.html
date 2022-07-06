@@ -1,0 +1,21 @@
+{% extends 'home/base.html'%}
+{% load static %}
+
+{% block body %}
+    <section id="blog" class="blog-mf sect-pt4 route">
+        <div class="text-center">
+                <div class="row">
+                        <div class="card card-blog"><br>
+                                <h1>Do you want delete?</h1>
+                                <form action="" enctype="multipart/form-data" method="post">
+                                        {% csrf_token %}
+                                    <a href="{% url 'news' %}"  class="button button-a button-big button-rouded">No</a>
+                                    <button type="submit" class="button button-a button-big button-rouded"> Delete </button>
+                                    <br><br>
+                                </form>
+
+                        </div>
+                </div>
+        </div>
+</section>
+{% endblock %}

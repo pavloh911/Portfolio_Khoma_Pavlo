@@ -1,0 +1,265 @@
+{% extends 'home/base.html'%}
+{% load static %}
+
+{% block nav1 %}<li><a class="nav-link scrollto active" href="#hero">Home</a></li>{% endblock %}
+{% block nav2 %}<li><a class="nav-link scrollto" href="#about">About</a></li>{% endblock %}
+{% block nav3 %}<li><a class="nav-link scrollto " href="#news">News</a></li>{% endblock %}
+{% block nav4 %}<li><a class="nav-link scrollto" href="#contact">Contact</a></li>{% endblock %}
+
+{% block body%}
+<!-- ======= Hero Section ======= -->
+<div id="hero" class="hero route bg-image" style="background-image: url({% static 'img/hero-bg.jpg' %})">
+    <div class="overlay-itro"></div>
+    <div class="hero-content display-table">
+      <div class="table-cell">
+        <div class="container">
+          <!--<p class="display-6 color-d">Hello, world!</p>-->
+          <h1 class="hero-title mb-4">I am Pavlo Khoma</h1>
+          <p class="hero-subtitle"><span class="typed" data-typed-items="Developer"></span></p>
+          <!-- <p class="pt-3"><a class="btn btn-primary btn js-scroll px-4" href="#about" role="button">Learn More</a></p> -->
+        </div>
+      </div>
+    </div>
+  </div><!-- End Hero Section -->
+
+  <main id="main">
+
+    <!-- ======= About Section ======= -->
+    <section id="about" class="about-mf sect-pt4 route">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12">
+            <div class="box-shadow-full">
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="row">
+                    <div class="col-sm-6 col-md-5">
+                      <div class="about-img">
+                        <img src="{% static 'img/testimonial-2.jpg' %}" class="img-fluid rounded b-shadow-a" alt="">
+                      </div>
+                    </div>
+                    <div class="col-sm-6 col-md-7">
+                      <div class="about-info">
+                        <p><span class="title-s">Name: </span> <span>Khoma Pavlo</span></p>
+                        <p><span class="title-s">Profile: </span> <span>python backend developer</span></p>
+                        <p><span class="title-s">Email: </span> <span>pavloh911@gmail.com</span></p>
+                        <p><span class="title-s">Phone: </span> <span>(068) 1227228</span></p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="skill-mf">
+                    <p class="title-s">Skill</p>
+                    <span>Python</span> <span class="pull-right">85%</span>
+                    <div class="progress">
+                      <div class="progress-bar" role="progressbar" style="width: 85%;" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                    <span>SQLite</span> <span class="pull-right">75%</span>
+                    <div class="progress">
+                      <div class="progress-bar" role="progressbar" style="width: 75%;" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                    <span>Django</span> <span class="pull-right">50%</span>
+                    <div class="progress">
+                      <div class="progress-bar" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                    <span>HTML</span> <span class="pull-right">25%</span>
+                    <div class="progress">
+                      <div class="progress-bar" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                    <span>CSS</span> <span class="pull-right">25%</span>
+                    <div class="progress">
+                      <div class="progress-bar" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="about-me pt-4 pt-md-0">
+                    <div class="title-box-2">
+                      <h5 class="title-left">
+                        About me
+                      </h5>
+                    </div>
+                    <p class="lead">
+                      I am a young python developer with more than 1.5
+                      years of experience in non-commercial python
+                      development. Strong creative and analytical skills.
+                      Team player with an eye for detail. I love study and
+                      well motivated.
+                    </p>
+                    <div class="title-box-2">
+                      <h5 class="title-left">
+                        E X P E R I E N C E
+                      </h5>
+                    </div>
+                    <p class="lead">
+                      May 2020 -April 2022 - non-commercial
+                      development of crypto bots in Python.
+                      Data was obtained through the "ccxt" library and Web Scraping,
+                      after processing,
+                      it displayed the data in a table and performed currency transactions in real time.<br>
+                      • SQLite <br>
+                      • Threading(basic) <br>
+                      • Tkinter(basic) <br>
+                      • Web Scraping <br>
+                      • Telegram bot <br>
+                      • work with Excel from python <br>
+                    </p>
+                    <div class="title-left"></div>
+                    <br>
+                    <p class="lead">
+                      February-March 2020 - C# Trainee in startup
+                      LightUponCloud. Developed "Icon animation",
+                      logic with modifying OS
+                      registry.
+                    </p>
+                    <div class="title-box-2">
+                      <h5 class="title-left">
+                        About project
+                      </h5>
+                    </div>
+                    <p class="lead">
+                      The site is written on Python(Django) in 1 week.
+                      I took the finished frontend project on Bootstrap <a href="https://bootstrapmade.com/demo/DevFolio/"> "Here"</a>,
+                      with little changes, and add Back-end.
+                      Working: <br>
+                      • "Send Message Us" - send and review <br>
+                      • "News" - add, update, delete, review, groups(FK)
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section><!-- End About Section -->
+
+    <!-- ======= Blog Section ======= -->
+    <section id="news" class="blog-mf sect-pt4 route">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12">
+            <div class="title-box text-center">
+              <h3 class="title-a">
+                News
+              </h3>
+              <p class="subtitle-a">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              </p>
+              <form action="{% url 'news' %}" method="get">
+                <button type="submit" class="button button-a button-small button-rouded">See all</button>
+              </form>
+<!--              <div class="line-mf"></div>-->
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          {% if news %}
+            {% for new in news %}
+
+          <div class="col-md-4">
+              <div class="card card-blog">
+                <div class="card-img">
+                  <a href="{% url 'news_detail' new.id %}"><img src="{{ new.img.url }}" alt="" class="img-fluid"></a>
+                </div>
+                <div class="card-body">
+                  <div class="card-category-box">
+                    <div class="card-category">
+                      <h6 class="category">{{new.group}}</h6>
+                    </div>
+                  </div>
+                  <h3 class="card-title"><a href="{% url 'news_detail' new.id %}">{{new.title}}</a></h3>
+                  <p class="card-description">
+                    {{new.full_text}}
+                  </p>
+                </div>
+                <div class="card-footer">
+                  <div class="post-author">
+                    <a href="{% url 'news_detail' new.id %}">
+                      <img src="{{ new.author_img.url }}" alt="" class="avatar rounded-circle">
+                      <span class="author">{{new.author}}</span>
+                    </a>
+                  </div>
+                  <div class="post-date">
+                    <span class="bi bi-clock"></span> {{new.date}}
+                  </div>
+                </div>
+              </div>
+            </div>
+            {% endfor %}
+          {% else %}
+          <div class="title-box text-center">
+          <h1>We don't hane any news </h1>
+          </div>
+          {% endif %}
+<!--          /////-->
+
+
+        </div>
+      </div>
+    </section><!-- End Blog Section -->
+<!-- ======= Contact Section ======= -->
+    <section id="contact" class="paralax-mf footer-paralax bg-image sect-mt4 route" style="background-image: url({% static 'img/overlay-bg.jpg' %})">
+      <div class="overlay-mf"></div>
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12">
+            <div class="contact-mf">
+              <div id="contact" class="box-shadow-full">
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="title-box-2">
+                      <h5 class="title-left">
+                        Send Message Us
+                      </h5>
+                    </div>
+                    <div>
+                      <form action="" method="post" class="php-email-form">
+<!--                        HOLAAA-->
+                        {% csrf_token %}
+                        <div class="row">
+                          {% for i in message %}
+                          <div class="col-md-12 mb-3">
+                            <div class="form-group">
+                              {{ i }}
+<!--                              <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>-->
+                            </div>
+                          </div>
+                          {% endfor %}
+                        </div>
+                        <button class="button button-a button-big button-rouded">SEND</button>
+                      </form>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="title-box-2 pt-4 pt-md-0">
+                      <h5 class="title-left">
+                        Get in Touch
+                      </h5>
+                    </div>
+                    <div class="more-info">
+                      <p class="lead">
+
+                      </p>
+                      <ul class="list-ico">
+                        <li><span class="bi bi-geo-alt"></span>  Ukraine, Lviv</li>
+                        <li><span class="bi bi-phone"></span> (068) 122-7228</li>
+                        <li><span class="bi bi-envelope"></span> pavloh911@gmail.com</li>
+                      </ul>
+                    </div>
+                    <div class="socials">
+                      <ul>
+                        <li><a href="https://www.facebook.com/profile.php?id=100007653769457"><span class="ico-circle"><i class="bi bi-facebook"></i></span></a></li>
+                        <li><a href="https://www.instagram.com/khomapavlo/"><span class="ico-circle"><i class="bi bi-instagram"></i></span></a></li>
+                        <li><a href="https://www.linkedin.com/in/pavlo-khoma-882891185/"><span class="ico-circle"><i class="bi bi-linkedin"></i></span></a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section><!-- End Contact Section -->
+</main><!-- End #main -->
+{% endblock %}

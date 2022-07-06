@@ -1,0 +1,79 @@
+{% extends 'home/base.html'%}
+{% load static %}
+
+{% block body %}
+
+<section id="blog" class="blog-mf sect-pt4 route">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12">
+            <div class="title-box text-center">
+                <br>
+                <div class="line-mf"></div>
+              <h3 class="title-a">
+                News
+              </h3>
+                Sort by: {{status}}<br>
+    <form action="" method="post">
+        {% csrf_token %}
+        {% for gro in news_groups %}
+        <button class="button button-a button-small" name="group" value="{{gro.id}}">{{gro}}</button>
+        {% endfor %}
+        <button class="button button-a button-small">All</button>
+        <a href="{% url 'add_news' %}" class="button button-a button-small">Add</a>
+        <button class="button button-a button-small-big" name="group" value="all"><a href="{% url 'home_url'%}">Home</a></button>
+    </form>
+                <br>
+
+             <div class="line-mf"></div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          {% if news %}
+            {% for new in news %}
+
+          <div class="col-md-4">
+              <div class="card card-blog">
+                <div class="card-img">
+                  <a href="{% url 'news_detail' new.id %}"><img src="{{ new.img.url }}" alt="" class="img-fluid"></a>
+                </div>
+                <div class="card-body">
+                  <div class="card-category-box">
+                    <div class="card-category">
+                      <h6 class="category">{{new.group}}</h6>
+                    </div>
+                  </div>
+                  <h3 class="card-title"><a href="{% url 'news_detail' new.id %}">{{new.title}}</a></h3>
+                  <p class="card-description">
+                    {{new.full_text}}
+                  </p>
+                </div>
+                <div class="card-footer">
+                  <div class="post-author">
+                    <a href="{% url 'news_detail' new.id %}">
+                      <img src="{{ new.author_img.url }}" alt="" class="avatar rounded-circle">
+                      <span class="author">{{new.author}}</span>
+                    </a>
+                  </div>
+                  <div class="post-date">
+                    <span class="bi bi-clock"></span> {{new.date}}
+                  </div>
+                </div>
+              </div>
+            </div>
+            {% endfor %}
+          {% else %}
+          <div class="title-box text-center">
+          <h1>We don't hane any news </h1>
+          </div>
+          {% endif %}
+<!--          /////-->
+
+
+        </div>
+      </div>
+    </section><!-- End Blog Section -->
+
+
+{% endblock %}

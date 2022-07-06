@@ -1,0 +1,22 @@
+{% extends 'home/base.html'%}
+{% load static %}
+
+{% block body %}
+
+<section id="blog" class="blog-mf sect-pt4 route">
+    <div class="text-center">
+        <div class="row">
+<!--          <div class="col-md-4">-->
+              <div class="card card-blog">
+                <div class="card-img"><br>
+                    {% if name %}
+                    <h1>{{ name }},</h1><br>
+                    {% endif %}
+                    <h1>{{ text }}</h1><br>
+                    <h1>Back to <a href="{% url 'home_url' %}">home</a> page</h1>
+                </div>
+              </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
