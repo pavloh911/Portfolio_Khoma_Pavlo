@@ -24,7 +24,7 @@ urlpatterns = [
     path('', include('home.urls')),
     path('home/', include('home.urls')),
     path('telegram/', include('telegram.urls')),
-    path('news', include('news.urls')),
+    path('news/', include('news.urls')),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 
 from django.conf import settings
